@@ -23,12 +23,12 @@ pipeline {
                 echo 'Deploy to Prod'
             }
         } 
-        post{
-            success{
-                echo 'success'
+    post{
+        success{
+            echo 'success'
             }
-            failure{
-                echo 'failed'
+        failure{
+            echo 'failed'
             }
         }
         }
