@@ -1,42 +1,33 @@
-pipeline {
-    agent any 
-    stages {
-        stage('Build') {
-            steps {
-                echo 'Build'               
-            }
+pipeline{
+    agent any
+    stages{
+        stage('Build')
+        steps{
+            echo 'Build'
         }
-        stage('Test') {
-            steps {
+        stage('Test'){
+            steps{
                 echo 'Test'
             }
         }
-        stage('Push to Artifactory') {
-            steps {
-                echo 'Push to Artifactory'
-            }
-        }
-        stage('Deploy to QA') {
-            steps {
+       stage('Deploy QA'){
+            steps{
                 echo 'Deploy to QA'
             }
-        }
-
-        stage('Deploy to Prod') {
-            steps {
-                echo 'Deploy to Prod'
+        } 
+        stage('Prod'){
+            steps{
+                echo 'Prod'
             }
         }
     }
-    post {
-      failure {
-        echo 'Failed'
-      }
-      success {
-        echo 'Success'
-      }
-      aborted {
-        echo 'aborted'
-      }
+    post{
+        success{
+            echo 'success'
+        }
+        failure{
+            echo 'failed'
+        }
+
     }
 }
