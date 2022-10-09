@@ -11,9 +11,9 @@ pipeline {
                 echo 'Test'
             }
         }
-        stage('Push to artifactory') {
+        stage('Push to Artifactory') {
             steps {
-                echo 'Push to artifactory'
+                echo 'Push to Artifactory'
             }
         }
         stage('Deploy to QA') {
