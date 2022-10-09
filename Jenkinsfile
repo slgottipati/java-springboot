@@ -23,6 +23,11 @@ pipeline {
                 echo 'Deploy to QA'
             }
         }
+        stage('Deploy to UAT') {
+            steps {
+                echo 'Deploy to UAT'
+            }
+        }
 
         stage('Deploy to Prod') {
             steps {
