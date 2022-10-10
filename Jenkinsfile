@@ -43,9 +43,9 @@ pipeline{
                     echo 'Deploy to Staging'
                 }
             }
-            stage('Deploy To Prod'){
+            stage('Deploy To prod'){
                 steps{
-                    echo 'Deploy to Prod'
+                    echo 'Deploy to prod'
                 }
 
             }
