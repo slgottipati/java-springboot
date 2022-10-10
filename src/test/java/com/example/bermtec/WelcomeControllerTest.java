@@ -23,7 +23,7 @@ public class WelcomeControllerTest {
     public void welcome() throws Exception {
 		  this.mockMvc.perform(get("/"))
                 .andExpect(status().isOk())
-                .andExpect(view().name("welcome"))
+                .andExpect(view().name("welcome"));
              // .andExpect(content().string(containsString("welcome")));
     }
 }
