@@ -13,11 +13,6 @@ pipeline{
                 sh 'mvn test'
             }
         }       
-            stage('Sonarqube'){
-                steps{
-                    echo 'Sonarqube'
-                }
-            }
             stage('Push to Artifactory'){
                 steps{
                     echo 'Push to Artifactory'
